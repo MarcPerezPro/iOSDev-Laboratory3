@@ -80,6 +80,26 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         return true
     }
 
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        var objects = fetchedResultsController.fetchedObjects!
+        let object = objects[sourceIndexPath.row]
+        objects.remove(at: sourceIndexPath.row)
+        objects.insert(object, at: destinationIndexPath.row)
+        
+        // Save
+        do {
+            try fetchedResultsController.managedObjectContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+    }
+
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let context = fetchedResultsController.managedObjectContext
