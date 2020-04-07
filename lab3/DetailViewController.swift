@@ -11,15 +11,12 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
+    @IBOutlet weak var navigationBarTitle: UINavigationItem!
+    
     func configureView() {
-        // Update the user interface for the detail item.
-        if film != nil {
-            if let label = detailDescriptionLabel {
-                label.text = film?.title
-            }
-        }
+        guard let film = film else { return }
+        navigationBarTitle.title = film.title
+        detailDescriptionLabel.text = film.title
     }
 
     override func viewDidLoad() {
