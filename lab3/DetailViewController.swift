@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController {
 
@@ -22,7 +23,8 @@ class DetailViewController: UIViewController {
     }
     
     var film: FilmMO?
-    
+    var managedObjectContext: NSManagedObjectContext?
+
     func configureView() {
         guard let film = film else { return }
         navigationBarTitle.title = film.title
@@ -35,10 +37,42 @@ class DetailViewController: UIViewController {
         reviewInput.text = film.review
     }
 
+    func createFilm() -> FilmMO {
+        let newFilm = FilmMO(context: managedObjectContext!)
+        // Set the default values
+        newFilm.title = "TITLE"
+        newFilm.director = "DIRECTOR"
+        newFilm.rating = 5
+        newFilm.watchingDate = Date()
+        newFilm.review = "REVIEW"
+        print("Initailised newFilm", newFilm)
+        return newFilm
+    }
+    
+    func saveFilm() {
+        print("Saving the film")
+        // Save the context.
+        do {
+            try managedObjectContext!.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        if film == nil {
+            film = createFilm()
+        }
         configureView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        // Save before going back
+        saveFilm()
     }
 }
 
