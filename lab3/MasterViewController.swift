@@ -102,12 +102,20 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let alertController = UIAlertController(title: "Warning", message: "Are you sure?", preferredStyle: .alert)
+            let film = fetchedResultsController.object(at: indexPath)
+            let title = "Delete \(film.title!) (directed by \(film.director!))?"
+            let message = "Are you sure you want to delete this film?"
+            //Create the AlertController and add Its action like button in Actionsheet
+            let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
 
-            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
+            let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+                print("Cancel")
+            }
+            actionSheetControllerIOS8.addAction(cancelActionButton)
+            let deleteActionButton = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
                 let context = self.fetchedResultsController.managedObjectContext
-                context.delete(self.fetchedResultsController.object(at: indexPath))
-                    
+                context.delete(film)
+
                 do {
                     try context.save()
                 } catch {
@@ -117,12 +125,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                     fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
                 }
             })
-            alertController.addAction(deleteAction)
-
-            let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-            alertController.addAction(cancelAction)
-
-            present(alertController, animated: true, completion: nil)
+            actionSheetControllerIOS8.addAction(deleteActionButton)
+            self.present(actionSheetControllerIOS8, animated: true, completion: nil)
         }
     }
 
