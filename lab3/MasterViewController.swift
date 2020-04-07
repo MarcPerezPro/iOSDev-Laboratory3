@@ -98,6 +98,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     func configureCell(_ cell: UITableViewCell, withFilm film: FilmMO) {
         cell.textLabel!.text = film.title
+        cell.detailTextLabel!.text = "\(film.director!) (rating: \(film.rating))"
     }
 
     // MARK: - Fetched results controller
