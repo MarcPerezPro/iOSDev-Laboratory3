@@ -37,15 +37,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func insertNewObject(_ sender: Any) {
         let context = self.fetchedResultsController.managedObjectContext
         let newFilm = FilmMO(context: context)
-
-        // Set the default date
+        
+        // Set the default values
+        newFilm.title = "TITLE"
+        newFilm.director = "DIRECTOR"
+        newFilm.rating = 5
         newFilm.watchingDate = Date()
-
-        func randomString(length: Int) -> String {
-          let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-          return String((0..<length).map{ _ in letters.randomElement()! })
-        }
-        newFilm.title = randomString(length: 20)
+        newFilm.review = "REVIEW"
 
         // Save the context.
         do {
@@ -56,6 +54,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
+        // Go to the editing page
+        performSegue(withIdentifier: "showDetail", sender: self)
     }
 
     // MARK: - Segues

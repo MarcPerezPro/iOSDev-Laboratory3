@@ -4,11 +4,11 @@
         <userInfo/>
     </entity>
     <entity name="Film" representedClassName="FilmMO" syncable="YES" codeGenerationType="class">
-        <attribute name="director" attributeType="String" defaultValueString=""/>
+        <attribute name="director" attributeType="String" defaultValueString="DIRECTOR"/>
         <attribute name="rating" attributeType="Integer 16" minValueString="0" maxValueString="10" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="review" attributeType="String" defaultValueString="REVIEW"/>
         <attribute name="title" attributeType="String" defaultValueString="TITLE"/>
-        <attribute name="watchingDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="watchingDate" attributeType="Date" defaultDateTimeInterval="599526000" usesScalarValueType="NO"/>
     </entity>
     <elements>
         <element name="Event" positionX="261" positionY="189" width="128" height="43"/>
