@@ -10,13 +10,16 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
     @IBOutlet weak var navigationBarTitle: UINavigationItem!
+    @IBOutlet weak var titleInput: UITextField!
+    
+    
+    var film: FilmMO?
     
     func configureView() {
         guard let film = film else { return }
         navigationBarTitle.title = film.title
-        detailDescriptionLabel.text = film.title
+        titleInput.text = film.title
     }
 
     override func viewDidLoad() {
@@ -24,14 +27,5 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         configureView()
     }
-
-    var film: FilmMO? {
-        didSet {
-            // Update the view.
-            configureView()
-        }
-    }
-
-
 }
 
