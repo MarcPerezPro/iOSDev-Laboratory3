@@ -47,6 +47,9 @@
                                                 <rect key="frame" x="38" y="0.0" width="366" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="onTitleChanged:" destination="JEX-9P-axG" eventType="editingDidEnd" id="Xia-3J-4L0"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -63,25 +66,28 @@
                                                 <rect key="frame" x="66.5" y="0.0" width="337.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="onDirectorChanged:" destination="JEX-9P-axG" eventType="editingDidEnd" id="mFd-4x-IlN"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ion-3s-Obd">
-                                        <rect key="frame" x="0.0" y="236" width="404" height="34"/>
+                                        <rect key="frame" x="0.0" y="236" width="404" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bz-56-UvJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufA-Xm-dZM">
-                                                <rect key="frame" x="53.5" y="0.0" width="256.5" height="34"/>
+                                                <rect key="frame" x="53.5" y="0.0" width="256.5" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="M7i-jk-ysY">
-                                                <rect key="frame" x="310" y="0.0" width="94" height="34"/>
+                                                <rect key="frame" x="310" y="0.0" width="94" height="32"/>
                                                 <connections>
                                                     <action selector="stepperValueChanged:" destination="JEX-9P-axG" eventType="valueChanged" id="bx6-hO-le3"/>
                                                 </connections>
@@ -89,24 +95,27 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5t-x6-sIk">
-                                        <rect key="frame" x="0.0" y="354" width="404" height="165.5"/>
+                                        <rect key="frame" x="0.0" y="352" width="404" height="216"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watching date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfO-6l-azs">
-                                                <rect key="frame" x="0.0" y="0.0" width="115.5" height="165.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="115.5" height="216"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="XeO-ji-p11">
-                                                <rect key="frame" x="115.5" y="0.0" width="288.5" height="165.5"/>
+                                                <rect key="frame" x="115.5" y="0.0" width="288.5" height="216"/>
+                                                <connections>
+                                                    <action selector="onWatchingDateChanged:" destination="JEX-9P-axG" eventType="valueChanged" id="w7J-Q5-TfQ"/>
+                                                </connections>
                                             </datePicker>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KI-DH-GtD">
-                                        <rect key="frame" x="0.0" y="603.5" width="404" height="160.5"/>
+                                        <rect key="frame" x="0.0" y="652" width="404" height="112"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U1Z-hH-jsK">
-                                                <rect key="frame" x="0.0" y="0.0" width="404" height="160.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="112"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-l1-j8w">
                                                         <rect key="frame" x="0.0" y="0.0" width="404" height="20.5"/>
@@ -114,16 +123,16 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0zN-RS-jzc">
-                                                        <rect key="frame" x="0.0" y="20.5" width="404" height="110"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPk-RT-xDc">
+                                                        <rect key="frame" x="0.0" y="20.5" width="404" height="61.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="onReviewChanged:" destination="JEX-9P-axG" eventType="editingDidEnd" id="rgp-Ah-te9"/>
+                                                        </connections>
+                                                    </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dv7-OH-Fj7">
-                                                        <rect key="frame" x="0.0" y="130.5" width="404" height="30"/>
+                                                        <rect key="frame" x="0.0" y="82" width="404" height="30"/>
                                                         <state key="normal" title="Save changes"/>
                                                         <connections>
                                                             <action selector="saveChangesButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="jha-gn-9q1"/>
@@ -134,9 +143,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="R5t-x6-sIk" firstAttribute="top" secondItem="uao-y4-lU6" secondAttribute="top" constant="354" id="hJY-ay-kFp"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -156,7 +162,7 @@
                         <outlet property="navigationBarTitle" destination="mOI-FS-AaM" id="c7f-N7-Mwe"/>
                         <outlet property="ratingInput" destination="ufA-Xm-dZM" id="dTg-DC-8oe"/>
                         <outlet property="ratingStepper" destination="M7i-jk-ysY" id="taC-gH-bVW"/>
-                        <outlet property="reviewInput" destination="0zN-RS-jzc" id="MUy-g1-ICS"/>
+                        <outlet property="reviewInput" destination="MPk-RT-xDc" id="Obj-Zn-lOg"/>
                         <outlet property="titleInput" destination="j2j-Ht-zhE" id="UZA-YX-kzp"/>
                     </connections>
                 </viewController>
