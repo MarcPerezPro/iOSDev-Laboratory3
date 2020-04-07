@@ -34,17 +34,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="84" translatesAutoresizingMaskIntoConstraints="NO" id="uao-y4-lU6">
                                 <rect key="frame" x="5" y="93" width="404" height="764"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="344" translatesAutoresizingMaskIntoConstraints="NO" id="qUb-qd-4r2">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8x9-D6-p96">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uf-wI-v2X">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POi-kF-RSh">
                                                 <rect key="frame" x="0.0" y="0.0" width="38" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUY-lV-Rif">
-                                                <rect key="frame" x="382" y="0.0" width="22" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j2j-Ht-zhE">
+                                                <rect key="frame" x="38" y="0.0" width="366" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -149,7 +149,7 @@
                         <outlet property="navigationBarTitle" destination="mOI-FS-AaM" id="c7f-N7-Mwe"/>
                         <outlet property="ratingInput" destination="ufA-Xm-dZM" id="dTg-DC-8oe"/>
                         <outlet property="reviewInput" destination="0zN-RS-jzc" id="MUy-g1-ICS"/>
-                        <outlet property="titleInput" destination="xUY-lV-Rif" id="S4b-iV-wME"/>
+                        <outlet property="titleInput" destination="j2j-Ht-zhE" id="UZA-YX-kzp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
