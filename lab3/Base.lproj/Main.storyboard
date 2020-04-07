@@ -89,24 +89,24 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5t-x6-sIk">
-                                        <rect key="frame" x="0.0" y="354" width="404" height="195.5"/>
+                                        <rect key="frame" x="0.0" y="354" width="404" height="165.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watching date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfO-6l-azs">
-                                                <rect key="frame" x="0.0" y="0.0" width="115.5" height="195.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="115.5" height="165.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="XeO-ji-p11">
-                                                <rect key="frame" x="115.5" y="0.0" width="288.5" height="195.5"/>
+                                                <rect key="frame" x="115.5" y="0.0" width="288.5" height="165.5"/>
                                             </datePicker>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KI-DH-GtD">
-                                        <rect key="frame" x="0.0" y="633.5" width="404" height="130.5"/>
+                                        <rect key="frame" x="0.0" y="603.5" width="404" height="160.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U1Z-hH-jsK">
-                                                <rect key="frame" x="0.0" y="0.0" width="404" height="130.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="160.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-l1-j8w">
                                                         <rect key="frame" x="0.0" y="0.0" width="404" height="20.5"/>
@@ -122,6 +122,13 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dv7-OH-Fj7">
+                                                        <rect key="frame" x="0.0" y="130.5" width="404" height="30"/>
+                                                        <state key="normal" title="Save changes"/>
+                                                        <connections>
+                                                            <action selector="saveChangesButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="jha-gn-9q1"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -230,6 +237,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tll-UG-LXB"/>
+        <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>

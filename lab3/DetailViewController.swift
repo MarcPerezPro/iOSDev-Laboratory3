@@ -21,6 +21,10 @@ class DetailViewController: UIViewController {
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
     }
+
+    @IBAction func saveChangesButton(_ sender: UIButton) {
+        saveFilm()
+    }
     
     var film: FilmMO?
     var managedObjectContext: NSManagedObjectContext?
