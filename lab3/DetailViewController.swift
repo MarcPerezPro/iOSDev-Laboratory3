@@ -15,9 +15,9 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = detailItem {
+        if film != nil {
             if let label = detailDescriptionLabel {
-                label.text = detail.timestamp!.description
+                label.text = film?.title
             }
         }
     }
@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
         configureView()
     }
 
-    var detailItem: Event? {
+    var film: FilmMO? {
         didSet {
             // Update the view.
             configureView()
