@@ -15,11 +15,15 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleInput: UITextField!
     @IBOutlet weak var directorInput: UITextField!
     @IBOutlet weak var ratingInput: UITextField!
+    @IBOutlet weak var ratingStepper: UIStepper!
     @IBOutlet weak var dateInput: UIDatePicker!
     @IBOutlet weak var reviewInput: UITextView!
 
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        guard let film = film else { return }
+        film.rating = Int16(sender.value)
+        ratingInput.text = String(film.rating)
     }
 
     @IBAction func saveChangesButton(_ sender: UIButton) {
@@ -35,6 +39,7 @@ class DetailViewController: UIViewController {
         titleInput.text = film.title
         directorInput.text = film.director
         ratingInput.text = String(film.rating)
+        ratingStepper.value = Double(film.rating)
         if let watchingDate = film.watchingDate {
             dateInput.date = watchingDate
         }

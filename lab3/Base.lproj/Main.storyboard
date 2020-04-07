@@ -80,7 +80,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="M7i-jk-ysY">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="M7i-jk-ysY">
                                                 <rect key="frame" x="310" y="0.0" width="94" height="34"/>
                                                 <connections>
                                                     <action selector="stepperValueChanged:" destination="JEX-9P-axG" eventType="valueChanged" id="bx6-hO-le3"/>
@@ -155,6 +155,7 @@
                         <outlet property="directorInput" destination="als-Hd-XIN" id="XeA-FN-9mm"/>
                         <outlet property="navigationBarTitle" destination="mOI-FS-AaM" id="c7f-N7-Mwe"/>
                         <outlet property="ratingInput" destination="ufA-Xm-dZM" id="dTg-DC-8oe"/>
+                        <outlet property="ratingStepper" destination="M7i-jk-ysY" id="taC-gH-bVW"/>
                         <outlet property="reviewInput" destination="0zN-RS-jzc" id="MUy-g1-ICS"/>
                         <outlet property="titleInput" destination="j2j-Ht-zhE" id="UZA-YX-kzp"/>
                     </connections>
