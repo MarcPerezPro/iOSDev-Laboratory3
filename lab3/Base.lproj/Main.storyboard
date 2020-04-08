@@ -31,8 +31,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="84" translatesAutoresizingMaskIntoConstraints="NO" id="uao-y4-lU6">
-                                <rect key="frame" x="5" y="93" width="404" height="764"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uao-y4-lU6">
+                                <rect key="frame" x="5" y="93" width="404" height="715"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8x9-D6-p96">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="34"/>
@@ -54,7 +54,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUm-kj-RrN">
-                                        <rect key="frame" x="0.0" y="118" width="404" height="34"/>
+                                        <rect key="frame" x="0.0" y="39" width="404" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5w-uT-Kkh">
                                                 <rect key="frame" x="0.0" y="0.0" width="66.5" height="34"/>
@@ -73,7 +73,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ion-3s-Obd">
-                                        <rect key="frame" x="0.0" y="236" width="404" height="32"/>
+                                        <rect key="frame" x="0.0" y="78" width="404" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bz-56-UvJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="53.5" height="32"/>
@@ -95,7 +95,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5t-x6-sIk">
-                                        <rect key="frame" x="0.0" y="352" width="404" height="216"/>
+                                        <rect key="frame" x="0.0" y="115" width="404" height="216"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watching date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfO-6l-azs">
                                                 <rect key="frame" x="0.0" y="0.0" width="115.5" height="216"/>
@@ -112,10 +112,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KI-DH-GtD">
-                                        <rect key="frame" x="0.0" y="652" width="404" height="112"/>
+                                        <rect key="frame" x="0.0" y="336" width="404" height="379"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U1Z-hH-jsK">
-                                                <rect key="frame" x="0.0" y="0.0" width="404" height="112"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="379"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-l1-j8w">
                                                         <rect key="frame" x="0.0" y="0.0" width="404" height="20.5"/>
@@ -124,7 +124,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPk-RT-xDc">
-                                                        <rect key="frame" x="0.0" y="20.5" width="404" height="61.5"/>
+                                                        <rect key="frame" x="0.0" y="20.5" width="404" height="328.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -132,7 +132,7 @@
                                                         </connections>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dv7-OH-Fj7">
-                                                        <rect key="frame" x="0.0" y="82" width="404" height="30"/>
+                                                        <rect key="frame" x="0.0" y="349" width="404" height="30"/>
                                                         <state key="normal" title="Save changes"/>
                                                         <connections>
                                                             <action selector="saveChangesButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="jha-gn-9q1"/>
@@ -156,6 +156,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dateInput" destination="XeO-ji-p11" id="Wj6-UC-Nns"/>
                         <outlet property="directorInput" destination="als-Hd-XIN" id="XeA-FN-9mm"/>
