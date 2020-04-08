@@ -131,13 +131,24 @@
                                                             <action selector="onReviewChanged:" destination="JEX-9P-axG" eventType="editingDidEnd" id="rgp-Ah-te9"/>
                                                         </connections>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dv7-OH-Fj7">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUG-b0-TX7">
                                                         <rect key="frame" x="0.0" y="349" width="404" height="30"/>
-                                                        <state key="normal" title="Save changes"/>
-                                                        <connections>
-                                                            <action selector="saveChangesButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="jha-gn-9q1"/>
-                                                        </connections>
-                                                    </button>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dv7-OH-Fj7">
+                                                                <rect key="frame" x="0.0" y="0.0" width="356" height="30"/>
+                                                                <state key="normal" title="Save changes"/>
+                                                                <connections>
+                                                                    <action selector="saveChangesButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="jha-gn-9q1"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ej-bH-luA">
+                                                                <rect key="frame" x="356" y="0.0" width="48" height="30"/>
+                                                                <state key="normal" title="Cancel">
+                                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
