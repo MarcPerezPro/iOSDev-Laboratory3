@@ -38,13 +38,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POi-kF-RSh">
-                                                <rect key="frame" x="0.0" y="0.0" width="38" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="66.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j2j-Ht-zhE">
-                                                <rect key="frame" x="38" y="0.0" width="366" height="34"/>
+                                                <rect key="frame" x="66.5" y="0.0" width="337.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -76,13 +76,13 @@
                                         <rect key="frame" x="0.0" y="78" width="404" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bz-56-UvJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="66.5" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufA-Xm-dZM">
-                                                <rect key="frame" x="53.5" y="0.0" width="256.5" height="32"/>
+                                                <rect key="frame" x="66.5" y="0.0" width="243.5" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -143,6 +143,10 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="ufA-Xm-dZM" firstAttribute="leading" secondItem="w5w-uT-Kkh" secondAttribute="trailing" id="jwc-06-xR1"/>
+                                    <constraint firstItem="j2j-Ht-zhE" firstAttribute="leading" secondItem="w5w-uT-Kkh" secondAttribute="trailing" id="kSk-HE-KrW"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
