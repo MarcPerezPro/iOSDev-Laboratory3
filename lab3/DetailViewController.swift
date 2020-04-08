@@ -41,6 +41,11 @@ class DetailViewController: UIViewController {
         saveFilm()
     }
     
+    @IBAction func cancelButton(_ sender: UIButton) {
+        print("Cancelling")
+        dismiss(animated: true, completion: nil)
+    }
+    
     var film: FilmMO?
     var managedObjectContext: NSManagedObjectContext?
 
@@ -90,9 +95,9 @@ class DetailViewController: UIViewController {
         configureView()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        // Save before going back
-        saveFilm()
-    }
+//    override func viewWillDisappear(_ animated: Bool) {
+//        // Save before going back
+//        saveFilm()
+//    }
 }
 

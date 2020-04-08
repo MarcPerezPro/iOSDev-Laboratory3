@@ -146,6 +146,9 @@
                                                                 <state key="normal" title="Cancel">
                                                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="cancelButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="u3S-Nj-ZAd"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
