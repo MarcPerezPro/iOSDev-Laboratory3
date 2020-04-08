@@ -17,11 +17,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        navigationItem.leftBarButtonItem = editButtonItem
 
+        navigationItem.leftBarButtonItem = editButtonItem
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-        navigationItem.rightBarButtonItem = addButton
+        let sortButton = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(sortTable(_:)))
+        navigationItem.rightBarButtonItems = [sortButton, addButton]
+
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -34,9 +35,26 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     @objc
-    func insertNewObject(_ sender: Any) {
+    func insertNewObject(_ sender: UIBarButtonItem) {
         // Go to the editing page
         performSegue(withIdentifier: "showDetail", sender: sender)
+    }
+    
+    var ascending = false
+    @objc
+    func sortTable(_ sender: UIBarButtonItem) {
+        NSFetchedResultsController<FilmMO>.deleteCache(withName: _fetchedResultsController?.cacheName)
+        let sortDescriptor = NSSortDescriptor(key: "rating", ascending: ascending)
+        sortFetchRequest.sortDescriptors = [sortDescriptor]
+        do {
+            try _fetchedResultsController!.performFetch()
+            ascending = !ascending
+        } catch {
+             // Replace this implementation with code to handle the error appropriately.
+             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+             let nserror = error as NSError
+             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
     }
 
     // MARK: - Segues
@@ -136,39 +154,42 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     // MARK: - Fetched results controller
+    
 
-    var fetchedResultsController: NSFetchedResultsController<FilmMO> {
-        if _fetchedResultsController != nil {
-            return _fetchedResultsController!
-        }
-        
+    lazy var sortFetchRequest: NSFetchRequest<FilmMO> = {
         let fetchRequest: NSFetchRequest<FilmMO> = FilmMO.fetchRequest()
         
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "title", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "rating", ascending: ascending)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
-        // Edit the section name key path and cache name if appropriate.
-        // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: "Master")
-        aFetchedResultsController.delegate = self
-        _fetchedResultsController = aFetchedResultsController
-        
-        do {
-            try _fetchedResultsController!.performFetch()
-        } catch {
-             // Replace this implementation with code to handle the error appropriately.
-             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-             let nserror = error as NSError
-             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        return fetchRequest
+    }()
+    var fetchedResultsController: NSFetchedResultsController<FilmMO> {
+        if _fetchedResultsController != nil {
+            return _fetchedResultsController!
         }
-        
-        return _fetchedResultsController!
-    }    
+            // Edit the section name key path and cache name if appropriate.
+            // nil for section name key path means "no sections".
+            let aFetchedResultsController = NSFetchedResultsController(fetchRequest: sortFetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: "Master")
+            aFetchedResultsController.delegate = self
+            _fetchedResultsController = aFetchedResultsController
+            
+            do {
+                try _fetchedResultsController!.performFetch()
+            } catch {
+                 // Replace this implementation with code to handle the error appropriately.
+                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                 let nserror = error as NSError
+                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+            
+            return _fetchedResultsController!
+    }
     var _fetchedResultsController: NSFetchedResultsController<FilmMO>? = nil
 
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
