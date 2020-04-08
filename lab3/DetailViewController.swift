@@ -20,7 +20,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var reviewInput: UITextField!
     
     @IBAction func onTitleChanged(_ sender: UITextField) {
+        print("Sender text", sender.text!)
         film?.title = sender.text
+        print("Film text", film!.title!)
     }
     @IBAction func onDirectorChanged(_ sender: UITextField) {
         film?.director = sender.text
@@ -43,9 +45,12 @@ class DetailViewController: UIViewController {
     
     @IBAction func cancelButton(_ sender: UIButton) {
         print("Cancelling")
-        dismiss(animated: true, completion: nil)
+        print("Before", film!)
+        managedObjectContext?.rollback()
+        print("After rollback", film!)
+        configureView()
     }
-    
+
     var film: FilmMO?
     var managedObjectContext: NSManagedObjectContext?
 
@@ -73,9 +78,9 @@ class DetailViewController: UIViewController {
         print("Initailised newFilm", newFilm)
         return newFilm
     }
-    
+
     func saveFilm() {
-        print("Saving the film")
+        print("Saving the film", film!)
         // Save the context.
         do {
             try managedObjectContext!.save()
@@ -95,9 +100,9 @@ class DetailViewController: UIViewController {
         configureView()
     }
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        // Save before going back
-//        saveFilm()
-//    }
+    override func viewWillDisappear(_ animated: Bool) {
+        // Save before going back
+        saveFilm()
+    }
 }
 
