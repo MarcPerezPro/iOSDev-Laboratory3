@@ -19,9 +19,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.viewDidLoad()
 
         navigationItem.leftBarButtonItem = editButtonItem
+        let sortButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(sortTable(_:)))
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-        let sortButton = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(sortTable(_:)))
-        navigationItem.rightBarButtonItems = [sortButton, addButton]
+        navigationItem.rightBarButtonItems = [addButton, sortButton]
 
         if let split = splitViewController {
             let controllers = split.viewControllers
@@ -48,6 +48,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         sortFetchRequest.sortDescriptors = [sortDescriptor]
         do {
             try _fetchedResultsController!.performFetch()
+            tableView.reloadData()
             ascending = !ascending
         } catch {
              // Replace this implementation with code to handle the error appropriately.
