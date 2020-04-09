@@ -123,7 +123,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         if editingStyle == .delete {
             let film = fetchedResultsController.object(at: indexPath)
 
-            let title = String.localizedStringWithFormat(NSLocalizedString("Delete %s (directed by %s)?", comment: "Title text in the alert window"), film.title!, film.director!)
+            let title = String.localizedStringWithFormat(NSLocalizedString("Delete %@ (directed by %@)?", comment: "Title text in the alert window"), film.title!, film.director!)
             let message = NSLocalizedString("Are you sure you want to delete this film?", comment: "Message text in the alert window")
             //Create the AlertController and add Its action like button in Actionsheet
             let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
@@ -154,7 +154,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     func configureCell(_ cell: UITableViewCell, withFilm film: FilmMO) {
         cell.textLabel!.text = film.title
-        cell.detailTextLabel!.text = String.localizedStringWithFormat(NSLocalizedString("%s (rating: %d)", comment: "Subtitle in film tableview cells"), film.director!, film.rating)
+        let localizedString = NSLocalizedString("%@ (rating: %d)", comment: "Subtitle in film tableview cells")
+        cell.detailTextLabel!.text = String.localizedStringWithFormat(localizedString, film.director!, film.rating)
     }
 
     // MARK: - Fetched results controller
