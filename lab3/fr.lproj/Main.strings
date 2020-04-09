@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "Rating:"; ObjectID = "6bz-56-UvJ"; */
+"6bz-56-UvJ.text" = "Note:";
+
+/* Class = "UITableViewController"; title = "Master"; ObjectID = "7bK-jq-Zjz"; */
+"7bK-jq-Zjz.title" = "Maître";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "9Ej-bH-luA"; */
+"9Ej-bH-luA.normalTitle" = "Annuler";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Arm-wq-HPj"; */
+"Arm-wq-HPj.text" = "Titre";
+
+/* Class = "UIViewController"; title = "Detail"; ObjectID = "JEX-9P-axG"; */
+"JEX-9P-axG.title" = "Détail";
+
+/* Class = "UILabel"; text = "Title:"; ObjectID = "POi-kF-RSh"; */
+"POi-kF-RSh.text" = "Titre:";
+
+/* Class = "UINavigationController"; title = "Master"; ObjectID = "RMx-3f-FxP"; */
+"RMx-3f-FxP.title" = "Maître";
+
+/* Class = "UINavigationItem"; title = "Film Database"; ObjectID = "Zdf-7t-Un8"; */
+"Zdf-7t-Un8.title" = "Base de données de films";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "bBG-dK-rTJ"; */
+"bBG-dK-rTJ.text" = "Détail";
+
+/* Class = "UILabel"; text = "Watching date:"; ObjectID = "cfO-6l-azs"; */
+"cfO-6l-azs.text" = "Date de visionnage:";
+
+/* Class = "UIButton"; normalTitle = "Save changes"; ObjectID = "dv7-OH-Fj7"; */
+"dv7-OH-Fj7.normalTitle" = "Enregistrer les modifications";
+
+/* Class = "UILabel"; text = "Review:"; ObjectID = "gRk-l1-j8w"; */
+"gRk-l1-j8w.text" = "Commentaire:";
+
+/* Class = "UINavigationItem"; title = "Detail"; ObjectID = "mOI-FS-AaM"; */
+"mOI-FS-AaM.title" = "Détail";
+
+/* Class = "UILabel"; text = "Director:"; ObjectID = "w5w-uT-Kkh"; */
+"w5w-uT-Kkh.text" = "Réalisateur:";
