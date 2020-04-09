@@ -18,6 +18,7 @@
 		495FEACC243C69B3001D9114 /* lab3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FEACB243C69B3001D9114 /* lab3Tests.swift */; };
 		495FEAD7243C69B3001D9114 /* lab3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FEAD6243C69B3001D9114 /* lab3UITests.swift */; };
 		49A7CC9C243ED130009A48AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A7CC9E243ED130009A48AE /* Localizable.strings */; };
+		49A7CCA4243ED7FD009A48AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A7CCA2243ED7FD009A48AE /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		49A7CC9F243ED135009A48AE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		49A7CCA0243ED136009A48AE /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		49A7CCA1243ED138009A48AE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		49A7CCA3243ED7FD009A48AE /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				495FEABD243C69B3001D9114 /* Assets.xcassets */,
 				495FEABF243C69B3001D9114 /* LaunchScreen.storyboard */,
 				495FEAC2243C69B3001D9114 /* Info.plist */,
+				49A7CCA2243ED7FD009A48AE /* InfoPlist.strings */,
 				495FEAB1243C69AE001D9114 /* lab3.xcdatamodeld */,
 				49A7CC9E243ED130009A48AE /* Localizable.strings */,
 			);
@@ -256,6 +259,7 @@
 				49A7CC9C243ED130009A48AE /* Localizable.strings in Resources */,
 				495FEABE243C69B3001D9114 /* Assets.xcassets in Resources */,
 				495FEABC243C69AE001D9114 /* Main.storyboard in Resources */,
+				49A7CCA4243ED7FD009A48AE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +354,14 @@
 				49A7CCA1243ED138009A48AE /* es */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		49A7CCA2243ED7FD009A48AE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49A7CCA3243ED7FD009A48AE /* es */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

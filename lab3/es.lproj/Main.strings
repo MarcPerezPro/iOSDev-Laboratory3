@@ -1,42 +1,42 @@
-
 /* Class = "UILabel"; text = "Rating:"; ObjectID = "6bz-56-UvJ"; */
-"6bz-56-UvJ.text" = "Rating:";
+"6bz-56-UvJ.text" = "Clasificación:";
 
 /* Class = "UITableViewController"; title = "Master"; ObjectID = "7bK-jq-Zjz"; */
-"7bK-jq-Zjz.title" = "Master";
+"7bK-jq-Zjz.title" = "Maestro";
 
 /* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "9Ej-bH-luA"; */
-"9Ej-bH-luA.normalTitle" = "Cancel";
+"9Ej-bH-luA.normalTitle" = "Anular";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "Arm-wq-HPj"; */
-"Arm-wq-HPj.text" = "Title";
-
-/* Class = "UIViewController"; title = "Detail"; ObjectID = "JEX-9P-axG"; */
-"JEX-9P-axG.title" = "Detail";
-
-/* Class = "UILabel"; text = "Title:"; ObjectID = "POi-kF-RSh"; */
-"POi-kF-RSh.text" = "Title:";
-
-/* Class = "UINavigationController"; title = "Master"; ObjectID = "RMx-3f-FxP"; */
-"RMx-3f-FxP.title" = "Master";
-
-/* Class = "UINavigationItem"; title = "Film Database"; ObjectID = "Zdf-7t-Un8"; */
-"Zdf-7t-Un8.title" = "Film Database";
+"Arm-wq-HPj.text" = "Título";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "bBG-dK-rTJ"; */
-"bBG-dK-rTJ.text" = "Detail";
+"bBG-dK-rTJ.text" = "Detalle";
 
 /* Class = "UILabel"; text = "Watching date:"; ObjectID = "cfO-6l-azs"; */
-"cfO-6l-azs.text" = "Watching date:";
+"cfO-6l-azs.text" = "Fecha de visualización:";
 
 /* Class = "UIButton"; normalTitle = "Save changes"; ObjectID = "dv7-OH-Fj7"; */
-"dv7-OH-Fj7.normalTitle" = "Save changes";
+"dv7-OH-Fj7.normalTitle" = "Guardar cambios";
 
 /* Class = "UILabel"; text = "Review:"; ObjectID = "gRk-l1-j8w"; */
-"gRk-l1-j8w.text" = "Review:";
+"gRk-l1-j8w.text" = "Crítica:";
+
+/* Class = "UIViewController"; title = "Detail"; ObjectID = "JEX-9P-axG"; */
+"JEX-9P-axG.title" = "Detalle";
 
 /* Class = "UINavigationItem"; title = "Detail"; ObjectID = "mOI-FS-AaM"; */
-"mOI-FS-AaM.title" = "Detail";
+"mOI-FS-AaM.title" = "Detalle";
+
+/* Class = "UILabel"; text = "Title:"; ObjectID = "POi-kF-RSh"; */
+"POi-kF-RSh.text" = "Título:";
+
+/* Class = "UINavigationController"; title = "Master"; ObjectID = "RMx-3f-FxP"; */
+"RMx-3f-FxP.title" = "Maestro";
 
 /* Class = "UILabel"; text = "Director:"; ObjectID = "w5w-uT-Kkh"; */
 "w5w-uT-Kkh.text" = "Director:";
+
+/* Class = "UINavigationItem"; title = "Film Database"; ObjectID = "Zdf-7t-Un8"; */
+"Zdf-7t-Un8.title" = "Base de datos de cine";
+
