@@ -20,9 +20,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var reviewInput: UITextField!
     
     @IBAction func onTitleChanged(_ sender: UITextField) {
-        print("Sender text", sender.text!)
         film?.title = sender.text
-        print("Film text", film!.title!)
     }
     @IBAction func onDirectorChanged(_ sender: UITextField) {
         film?.director = sender.text
@@ -44,10 +42,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func cancelButton(_ sender: UIButton) {
-        print("Cancelling")
-        print("Before", film!)
         managedObjectContext?.rollback()
-        print("After rollback", film!)
         configureView()
     }
 
@@ -70,12 +65,11 @@ class DetailViewController: UIViewController {
     func createFilm() -> FilmMO {
         let newFilm = FilmMO(context: managedObjectContext!)
         // Set the default values
-        newFilm.title = "TITLE"
-        newFilm.director = "DIRECTOR"
+        newFilm.title = NSLocalizedString("TITLE", comment: "Placeholder film title")
+        newFilm.director = NSLocalizedString("DIRECTOR", comment: "Placeholder film director")
         newFilm.rating = 5
         newFilm.watchingDate = Date()
-        newFilm.review = "REVIEW"
-        print("Initailised newFilm", newFilm)
+        newFilm.review = NSLocalizedString("Insert review here", comment: "Placeholder film review")
         return newFilm
     }
 

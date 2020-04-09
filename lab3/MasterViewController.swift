@@ -122,16 +122,19 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let film = fetchedResultsController.object(at: indexPath)
-            let title = "Delete \(film.title!) (directed by \(film.director!))?"
-            let message = "Are you sure you want to delete this film?"
+
+            let title = String.localizedStringWithFormat(NSLocalizedString("Delete %s (directed by %s)?", comment: "Title text in the alert window"), film.title!, film.director!)
+            let message = NSLocalizedString("Are you sure you want to delete this film?", comment: "Message text in the alert window")
             //Create the AlertController and add Its action like button in Actionsheet
             let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
 
-            let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            let cancelText = NSLocalizedString("Cancel", comment: "Cancel text in the alert window")
+            let cancelActionButton = UIAlertAction(title: cancelText, style: .cancel) { _ in
                 print("Cancel")
             }
             actionSheetControllerIOS8.addAction(cancelActionButton)
-            let deleteActionButton = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
+            let deleteText = NSLocalizedString("Delete", comment: "Delete text in the alert window")
+            let deleteActionButton = UIAlertAction(title: deleteText, style: .destructive, handler: { (action) in
                 let context = self.fetchedResultsController.managedObjectContext
                 context.delete(film)
 
@@ -151,7 +154,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     func configureCell(_ cell: UITableViewCell, withFilm film: FilmMO) {
         cell.textLabel!.text = film.title
-        cell.detailTextLabel!.text = "\(film.director!) (rating: \(film.rating))"
+        cell.detailTextLabel!.text = String.localizedStringWithFormat(NSLocalizedString("%s (rating: %d)", comment: "Subtitle in film tableview cells"), film.director!, film.rating)
     }
 
     // MARK: - Fetched results controller
